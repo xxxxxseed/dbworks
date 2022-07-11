@@ -6,6 +6,9 @@ CREATE TABLE person(
     age         NUMBER(3)
 );
 
+SELECT *
+FROM person;
+
 -- 자료 삽입
 INSERT INTO person VALUES ('cloud', 'cloud123', '구름', 120);
 
