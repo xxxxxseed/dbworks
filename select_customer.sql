@@ -18,3 +18,11 @@ WHERE address LIKE '%대한민국%';
 SELECT name, address
 FROM customer
 WHERE phone IS NULL;
+
+-- 고객의 총 인원을 구하시오
+SELECT COUNT(*) AS 총고객수
+FROM customer;
+
+-- 책의 전체 수량
+SELECT COUNT(*) AS 총도서수
+FROM book;
