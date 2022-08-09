@@ -27,5 +27,6 @@ VALUES (b_seq.nextval, '제목입니다', '글 내용입니다', SYSDATE, 'cloudy');
 
 SELECT * FROM t_member;
 SELECT * FROM t_board;
+DELETE FROM t_board WHERE bnum=25;
 
 DESC t_member;
