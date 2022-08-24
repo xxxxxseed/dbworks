@@ -32,9 +32,11 @@ insert into employee values(102, '백두산', 32, 20);
 
 -- 부모테이블(참조테이블)에 부서코드가 없으므로 추가 안됨
 insert into employee values(103, '홍길동', 42, 30);
+insert into employee(empid, empname, age, deptid) values (104, '천지연', 30, 40);
 
 -- 삭제시에 자식키가 부모를 참조하므로 제약 조건에 해당: 삭제 불가
 delete from department where deptid=10;
+delete from department where deptname='디자인팀';
 
 select * from department;
 select * from employee;
