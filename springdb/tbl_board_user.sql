@@ -1,5 +1,5 @@
--- 비즈니스 컴포넌트(BoardWeb) board 테이블
-CREATE TABLE board(
+-- spring 프로젝트 사용
+CREATE TABLE tbl_board(
     bno     NUMBER(5) PRIMARY KEY,
     title   VARCHAR2(200),
     writer  VARCHAR2(20),
@@ -11,8 +11,7 @@ CREATE TABLE board(
 -- 자동 번호
 CREATE SEQUENCE seq;
 
--- users 테이블 생성
-CREATE TABLE users(
+CREATE TABLE tbl_user(
     id      VARCHAR2(8) PRIMARY KEY,
     passwd  VARCHAR2(8) NOT NULL,
     name    VARCHAR2(20) NOT NULL,
@@ -20,19 +19,18 @@ CREATE TABLE users(
 );
 
 -- 게시글 추가
-INSERT INTO board(bno, title, writer, content)
+INSERT INTO tbl_board(bno, title, writer, content)
 VALUES (seq.NEXTVAL, '가입인사', '관리자', '잘 부탁드립니다.');
 
 -- 회원 추가
-INSERT INTO users
+INSERT INTO tbl_user
 VALUES ('test', 'test123', '관리자', 'Admin');
-INSERT INTO users
+INSERT INTO tbl_user
 VALUES ('user1', 'user123', '장그래', 'User');
 
-select * from board ORDER BY bno DESC;
-select * from users;
+SELECT * FROM tbl_board ORDER BY bno DESC;
+SELECT * FROM tbl_user;
 
-DELETE FROM board WHERE bno=15;
+DELETE FROM tbl_board WHERE bno=3;
 
 COMMIT;
-
