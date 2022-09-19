@@ -22,6 +22,8 @@ insert into t_member2 values ('cloud', 'm123456@', '이구름', '여', default);
 insert into t_member2 values ('today', 'm123456@', '박오늘', '여', default);
 insert into t_board2 values (1, '제목입니다', '글 내용입니다', default, 0, 'cloud');
 
+use javaweb;
+
 select * from t_member2;
 select * from t_board2;
 drop table t_board2;

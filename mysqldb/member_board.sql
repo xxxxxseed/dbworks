@@ -1,6 +1,7 @@
 -- MemberBoard2(MVC)
 show databases;
 use javaweb;
+show tables;
 
 create table t_member(
 	memberid	varchar(20),
