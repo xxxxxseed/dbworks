@@ -7,13 +7,28 @@ create database javaweb;
 -- db 권한 주기
 grant all privileges on javaweb.* to jweb@localhost with grant option;
 
-create user spring_board_project@localhost identified by '54321';
+-- himedia user에게 bootdb에 대한 모든 권한 부여
 
-alter user spring_board_project@localhost identified with mysql_native_password by '12345';
+create user himedia@localhost identified by '54321';
 
-create database spring_board_project;
+alter user himedia@localhost identified with mysql_native_password by '12345';
 
-grant all privileges on spring_board_project.* to spring_board_project@localhost with grant option;
+create database bootdb;
+
+grant all privileges on bootdb.* to himedia@localhost with grant option;
 
 flush privileges;
+
+-- hidb 생성
+create database hidb;
+
+-- db권한 root
+grant all privileges on root.* to root@localhost with grant option;
+
+select * from mysql.user;
+
+show variables like 'max_connections';
+
+set global max_user_connections=200;
+
 

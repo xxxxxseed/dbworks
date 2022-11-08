@@ -22,7 +22,7 @@ INSERT INTO tbl_reply(rno, bno, reply, replyer)
 VALUES (seq_reply.NEXTVAL, 1, 'æ»≥Á«œººø‰', 'admin');
 -- ¥Ò±€ ¡∂»∏
 SELECT * FROM tbl_reply
-WHERE bno = 1;
+WHERE bno = 241;
 
 
 COMMIT;
